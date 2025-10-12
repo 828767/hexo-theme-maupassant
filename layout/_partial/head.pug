@@ -5,6 +5,7 @@ head
   meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
   meta(content='telephone=no', name='format-detection')
   meta(name='description', content=config.description)
+  meta(name='keywords', content=config.keywords)
   block title
   link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
   link(rel='stylesheet', type='text/css', href='https://unpkg.com/normalize.css')
@@ -51,3 +52,8 @@ head
   if theme.dark == true
     include darkmode.pug
 
+  if theme.adsense.ad_site == true
+    //- script(data-ad-client='#{theme.adsense.ad_client}', async, src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+    script(async, src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+    script.
+      (adsbygoogle = window.adsbygoogle || []).push({google_ad_client: '#{theme.adsense.ad_client}', enable_page_level_ads: true});

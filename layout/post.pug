@@ -12,6 +12,9 @@ block content
         span.category
           for category in page.categories.toArray()
             a(href=url_for(category.path))= category.name
+      if page.keywords
+        span= ' | '
+        span= page.keywords
       if theme.busuanzi == true
         script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
         span#busuanzi_container_page_pv= ' | '
@@ -47,6 +50,17 @@ block content
     if theme.post_copyright.enable == true && page.copyright != false
       include _widget/copyright.pug
 
+    if theme.adsense.ad_unit == true
+      script(async, src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+      ins.adsbygoogle(
+        style='display:block',
+        data-ad-client=theme.adsense.ad_client,
+        data-ad-slot=theme.adsense.ad_slot,
+        data-ad-format='auto',
+        data-full-width-responsive='true'
+      )
+      script.
+        (adsbygoogle = window.adsbygoogle || []).push({});
     if theme.shareto == true
       script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
       a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')

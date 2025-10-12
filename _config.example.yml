@@ -65,12 +65,12 @@ self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 microsoft_clarity: ## Your Microsoft Clarity tracking id, e.g. zg2ctuea9j
-fancybox: true ## If you want to use fancybox please set the value to true.
-show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
+fancybox: false ## If you want to use fancybox please set the value to true.
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 toc_number: true ## If you want to add list number to toc please set the value to true.
 shareto: false ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
 busuanzi: false ## If you want to use Busuanzi page views please set the value to true.
-wordcount: false ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
+wordcount: true ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 canvas_nest:
   enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
@@ -87,9 +87,14 @@ donate:
   btc_key: ## Bitcoin key, e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L
   paypal_url: ## Paypal URL, e.g. https://www.paypal.me/tufu9441
 post_copyright:
-  enable: false ## If you want to display the copyright info after each post, please set the value to true and fill the following items on your need.
-  author: ## Your author name, e.g. tufu9441
-  copyright_text: ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
+  enable: true ## If you want to display the copyright info after each post, please set the value to true and fill the following items on your need.
+  author: 凹凸曼 ## Your author name, e.g. tufu9441
+  copyright_text: 转载请务必保留本文链接和注明内容来源，并自负版权等法律责任。 ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
+adsense:
+  ad_site: false ##谷歌自动广告位，开了这个其他就不建议开了
+  ad_unit: true ##文章底部广告位
+  ad_client: ca-pub-7390437336363898 ## Google广告ID，如：ca-pub-7390437336363898
+  ad_slot: 7454544896 ##广告单元ID，如：9075736497，自动广告不需要填
 love: false ## If you want the love to appear when you click anywhere, set the value to true.
 plantuml: ## Using PlantUML to generate UML diagram, must install hexo-filter-plantuml (https://github.com/miao1007/hexo-filter-plantuml).
   render: "PlantUMLServer" ## Local or PlantUMLServer.
