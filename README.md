@@ -17,7 +17,7 @@ Install theme and renderers:
 ```shell
 git submodule add https://github.com/828767/hexo-theme-maupassant.git themes/maupassant
 npm install hexo-renderer-pug --save
-npm install hexo-renderer-sass-next --save
+npm install hexo-renderer-dartsass --save
 ## theme config in hexo root dir sync from `_config.example.yml`
 cp themes/maupassant/_config.example.yml _config.maupassant.yml
 ```
